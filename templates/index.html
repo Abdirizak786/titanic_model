@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Titanic Survival Predictor</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h2>Titanic Survival Predictor</h2>
+    <form action = "/predict" method="POST">
+        <label>Sex: </label>
+        <select name = "sex">
+            <option value = "male">Male</option>
+            <option value = "female">Female</option>
+        </select><br>
+        <label>Fare: </label>
+        <input type="text" name="fare"><br>
+        <input type="submit" value="Predict">
+    </form>
+    {% if prediction %}
+        <h3>Result: {{prediction}}</h3>
+    {% endif %}
+</body>
+</html> 
